@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ItemsController {
 	
-	@GetMapping("/items/{name}")
+	@GetMapping("/items/{id}")
 	public Item getItem(@PathVariable String name) {
 		return new Item(1001, name, BigDecimal.valueOf(220)); 
 	}

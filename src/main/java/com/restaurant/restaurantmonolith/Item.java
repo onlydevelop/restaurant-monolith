@@ -2,13 +2,17 @@ package com.restaurant.restaurantmonolith;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Item {
 	
+	@Id
 	private long id;
+	
 	private String name;
 	private BigDecimal price;
-	
-	public Item() {}
 	
 	public long getId() {
 		return id;
@@ -22,6 +26,8 @@ public class Item {
 		return price;
 	}
 
+	public Item() {}
+	
 	public Item(long id, String name, BigDecimal price) {
 		super();
 		this.id = id;
