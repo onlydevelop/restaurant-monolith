@@ -1,7 +1,5 @@
 package com.restaurant.restaurantmonolith;
 
-import java.math.BigDecimal;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -12,7 +10,7 @@ public class Item {
 	private long id;
 	
 	private String name;
-	private BigDecimal price;
+	private int price;
 	
 	public long getId() {
 		return id;
@@ -22,13 +20,17 @@ public class Item {
 		return name;
 	}
 
-	public BigDecimal getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
 	public Item() {}
 	
-	public Item(long id, String name, BigDecimal price) {
+	public Item(long id, String name, int price) {
 		super();
 		this.id = id;
 		this.name = name;
